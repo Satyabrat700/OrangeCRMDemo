@@ -31,7 +31,7 @@ let loginPage = function () {
     this.verifyHomePageafterLogin = function () {
 
         var text = element(by.xpath("//*[@id='branding']/a[1]/img"));
-        // expect(text.isPresent()).toBe(true);
+        expect(text.isPresent()).toBe(true);
 
     };
 };
