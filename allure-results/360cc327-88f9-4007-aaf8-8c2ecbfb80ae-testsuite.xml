@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1619573726687' stop='1619573730534'>
+    <name>Assign Leave for Vacation</name>
+    <title>Assign Leave for Vacation</title>
+    <test-cases>
+        <test-case start='1619573726689' status='passed' stop='1619573730530'>
+            <name>Login Page</name>
+            <title>Login Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

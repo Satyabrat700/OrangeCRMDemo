@@ -1,0 +1,52 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1619627673180' stop='1619627680029'>
+    <name>Assign Leave for Vacation</name>
+    <title>Assign Leave for Vacation</title>
+    <test-cases>
+        <test-case start='1619627673182' status='passed' stop='1619627678019'>
+            <name>Login Page</name>
+            <title>Login Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1619627678019' status='failed' stop='1619627680027'>
+            <name>Add New Employee details</name>
+            <title>Add New Employee details</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Failed: LastName.click is not a function</message>
+                <stack-trace>TypeError: LastName.click is not a function
+                    at addNewEmployee.addEmployee (C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\pages\addNewEmployee.js:59:27)
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+                    at UserContext.&lt;anonymous> (C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\tests\orangeCRMDEMO.js:33:5)
+                From: Task: Run it("Add New Employee details") in control flow
+                    at UserContext.&lt;anonymous> (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:19)
+                    at attempt (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+                    at QueueRunner.run (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+                    at QueueRunner.execute (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4199:10)
+                    at Spec.queueRunnerFactory (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:909:35)
+                    at Spec.execute (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:526:10)
+                    at UserContext.fn (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:5340:37)
+                    at attempt (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+                    at QueueRunner.run (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+                    at runNext (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4257:20)
+                From asynchronous test: 
+                Error
+                    at C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\tests\orangeCRMDEMO.js:30:3
+                    at Array.forEach (&lt;anonymous>)
+                    at Suite.&lt;anonymous> (C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\tests\orangeCRMDEMO.js:16:17)
+                    at addSpecsToSuite (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+                    at Env.describe (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+                    at describe (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+                    at Object.&lt;anonymous> (C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\tests\orangeCRMDEMO.js:8:1)
+                    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+                    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,29 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1619614853683' stop='1619614855517'>
+    <name>Assign Leave for Vacation1</name>
+    <title>Assign Leave for Vacation1</title>
+    <test-cases>
+        <test-case start='1619614853683' status='failed' stop='1619614855515'>
+            <name>Add a new Employee</name>
+            <title>Add a new Employee</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TypeError: Cannot set property 'currentTest' of undefined</message>
+                <stack-trace>TypeError: Cannot set property 'currentTest' of undefined
+                    at Allure.startCase (C:\Users\satya\node_modules\allure-js-commons\index.js:44:23)
+                    at Jasmine2AllureReporter.specStarted (C:\Users\satya\node_modules\jasmine-allure-reporter\src\Jasmine2AllureReporter.js:33:17)
+                    at dispatch (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4366:28)
+                    at ReportDispatcher.specStarted (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4337:11)
+                    at Spec.specStarted [as onStart] (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1181:18)
+                    at Spec.execute (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:506:10)
+                    at UserContext.fn (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:5340:37)
+                    at attempt (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+                    at QueueRunner.run (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+                    at QueueRunner.execute (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4199:10)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

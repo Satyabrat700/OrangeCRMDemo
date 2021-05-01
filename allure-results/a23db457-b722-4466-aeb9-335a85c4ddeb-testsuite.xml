@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1619652167690' stop='1619652171771'>
+    <name>Assign Leave for Vacation</name>
+    <title>Assign Leave for Vacation</title>
+    <test-cases>
+        <test-case start='1619652167691' status='failed' stop='1619652171769'>
+            <name>LoginPage</name>
+            <title>LoginPage</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Failed: element(...).then is not a function</message>
+                <stack-trace>TypeError: element(...).then is not a function
+                    at loginPage.verifyHomePageafterLogin (C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\pages\loginPage.js:35:10)
+                    at UserContext.&lt;anonymous> (C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\tests\orangeCRMDEMO.js:31:27)
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+                From: Task: Run it("LoginPage") in control flow
+                    at UserContext.&lt;anonymous> (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:19)
+                    at attempt (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+                    at QueueRunner.run (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+                    at QueueRunner.execute (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4199:10)
+                    at Spec.queueRunnerFactory (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:909:35)
+                    at Spec.execute (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:526:10)
+                    at UserContext.fn (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:5340:37)
+                    at attempt (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+                    at QueueRunner.run (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+                    at QueueRunner.execute (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4199:10)
+                From asynchronous test: 
+                Error
+                    at C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\tests\orangeCRMDEMO.js:19:9
+                    at Array.forEach (&lt;anonymous>)
+                    at Suite.&lt;anonymous> (C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\tests\orangeCRMDEMO.js:15:17)
+                    at addSpecsToSuite (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+                    at Env.describe (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+                    at describe (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+                    at Object.&lt;anonymous> (C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\tests\orangeCRMDEMO.js:12:1)
+                    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+                    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

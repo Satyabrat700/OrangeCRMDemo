@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites disabled="0" errors="0" failures="1" tests="2" time="7.648">
+ <testsuite name="Assign Leave for Vacation" timestamp="2021-05-01T22:49:32" hostname="localhost" time="7.648" errors="0" tests="2" skipped="0" disabled="0" failures="1">
+  <testcase classname="Assign Leave for Vacation" name="LoginPage" time="3.926">
+   <failure type="toBe" message="Expected true to be false."><![CDATA[Error: Failed expectation
+    at loginPage.verifyHomePageafterLogin (C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\pages\loginPage.js:35:38)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at UserContext.<anonymous> (C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\tests\orangeCRMDEMO.js:27:11)]]>
+   </failure>
+  </testcase>
+  <testcase classname="Assign Leave for Vacation" name="Add New Employee details" time="3.72" />
+ </testsuite>
+</testsuites>

@@ -1,0 +1,68 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1619649044518' stop='1619649047119'>
+    <name>Assign Leave for Vacation</name>
+    <title>Assign Leave for Vacation</title>
+    <test-cases>
+        <test-case start='1619649044519' status='failed' stop='1619649044559'>
+            <name>Login Page</name>
+            <title>Login Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Error while waiting for Protractor to sync with the page: "both angularJS testability and angular testability are undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"</message>
+                <stack-trace>Error: Error while waiting for Protractor to sync with the page: "both angularJS testability and angular testability are undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"
+                    at C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\built\browser.js:461:23
+                    at ManagedPromise.invokeCallback_ (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+                    at TaskQueue.execute_ (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+                    at TaskQueue.executeNext_ (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+                    at C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27
+                    at C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)Error
+                    at ElementArrayFinder.applyAction_ (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\built\element.js:459:27)
+                    at ElementArrayFinder.&lt;computed> [as click] (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
+                    at ElementFinder.&lt;computed> [as click] (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
+                    at new addUserLoginDetails (C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\pages\addUserLoginDetails.js:7:39)
+                    at Object.&lt;anonymous> (C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\pages\addUserLoginDetails.js:39:18)
+                    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+                    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+                    at Module.load (internal/modules/cjs/loader.js:928:32)
+                    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+                    at Module.require (internal/modules/cjs/loader.js:952:19)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1619649044560' status='passed' stop='1619649045798'>
+            <name>Add New Employee details</name>
+            <title>Add New Employee details</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1619649045799' status='passed' stop='1619649046306'>
+            <name>Add user details</name>
+            <title>Add user details</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1619649046306' status='passed' stop='1619649046740'>
+            <name>Assign leave for vacation</name>
+            <title>Assign leave for vacation</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1619649046740' status='passed' stop='1619649047117'>
+            <name>Login and verify leave</name>
+            <title>Login and verify leave</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

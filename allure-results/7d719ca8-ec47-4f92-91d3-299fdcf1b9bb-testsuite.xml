@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1619614329174' stop='1619614332963'>
+    <name>Assign Leave for Vacation1</name>
+    <title>Assign Leave for Vacation1</title>
+    <test-cases>
+        <test-case start='1619614329175' status='failed' stop='1619614332960'>
+            <name>Add a new Employee</name>
+            <title>Add a new Employee</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>TypeError: Cannot read property 'firstName' of undefined</message>
+                <stack-trace>TypeError: Cannot read property 'firstName' of undefined
+                    at addNewEmployee.addEmployee (C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\pages\addNewEmployee.js:13:57)
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

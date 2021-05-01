@@ -1,0 +1,62 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1619628100814' stop='1619628108404'>
+    <name>Assign Leave for Vacation</name>
+    <title>Assign Leave for Vacation</title>
+    <test-cases>
+        <test-case start='1619628100816' status='passed' stop='1619628104338'>
+            <name>Login Page</name>
+            <title>Login Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1619628104339' status='failed' stop='1619628108402'>
+            <name>Add New Employee details</name>
+            <title>Add New Employee details</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Failed: No element found using locator: By(link text, Contact Details)</message>
+                <stack-trace>NoSuchElementError: No element found using locator: By(link text, Contact Details)
+                    at C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\built\element.js:814:27
+                    at ManagedPromise.invokeCallback_ (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+                    at TaskQueue.execute_ (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+                    at TaskQueue.executeNext_ (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+                    at C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27
+                    at C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)Error
+                    at ElementArrayFinder.applyAction_ (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\built\element.js:459:27)
+                    at ElementArrayFinder.&lt;computed> [as click] (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
+                    at ElementFinder.&lt;computed> [as click] (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
+                    at addNewEmployee.addContact (C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\pages\addNewEmployee.js:69:43)
+                    at UserContext.&lt;anonymous> (C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\tests\orangeCRMDEMO.js:34:26)
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+                From: Task: Run it("Add New Employee details") in control flow
+                    at UserContext.&lt;anonymous> (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:19)
+                    at attempt (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+                    at QueueRunner.run (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+                    at QueueRunner.execute (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4199:10)
+                    at Spec.queueRunnerFactory (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:909:35)
+                    at Spec.execute (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:526:10)
+                    at UserContext.fn (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:5340:37)
+                    at attempt (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+                    at QueueRunner.run (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+                    at runNext (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4257:20)
+                From asynchronous test: 
+                Error
+                    at C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\tests\orangeCRMDEMO.js:30:3
+                    at Array.forEach (&lt;anonymous>)
+                    at Suite.&lt;anonymous> (C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\tests\orangeCRMDEMO.js:16:17)
+                    at addSpecsToSuite (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+                    at Env.describe (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+                    at describe (C:\Users\satya\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+                    at Object.&lt;anonymous> (C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\tests\orangeCRMDEMO.js:8:1)
+                    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+                    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

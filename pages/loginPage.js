@@ -5,33 +5,34 @@ let loginPage = function () {
     let password = element(by.id('txtPassword'));
     let loginButton = element(by.id('btnLogin'));
 
-    this.getURL = function (url) {
-        browser.get(url);
+    this.getURL =  async function (URL) {
+  
+        await browser.get(URL);
 
 
     };
 
-    this.enterUserName = function (user) {
-        userName.sendKeys(user);
+    this.enterUserName =  async function (user) {
+        await userName.sendKeys(user);
 
 
     };
-    this.enterpassword = function (userPassword) {
+    this.enterpassword = async function (userPassword) {
 
-        password.sendKeys(userPassword);
-
-    };
-
-    this.clickLoginButton = function () {
-
-        loginButton.click();
+        await password.sendKeys(userPassword);
 
     };
 
-    this.verifyHomePageafterLogin = function () {
+    this.clickLoginButton =  async function () {
+
+        await loginButton.click();
+
+    };
+
+    this.verifyHomePageafterLogin = async function () {
 
         var text = element(by.xpath("//*[@id='branding']/a[1]/img"));
-        expect(text.isPresent()).toBe(true);
+      expect(await text.isPresent()).toBe(false);
 
     };
 };

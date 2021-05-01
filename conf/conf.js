@@ -10,15 +10,21 @@ var reporter = new HtmlScreenshotReporter({
 // An example configuration file.
 exports.config = {
 
-  directConnect: true,
+  // Framework to use. Jasmine is recommended.
+  framework: 'jasmine',
+
+    directConnect: true,
+  seleniumAddress: 'http://10.10.20.178:4460/wd/hub',
 
   // Capabilities to be passed to the webdriver instance.
   capabilities: {
     'browserName': 'chrome'
+  
   },
+//seleniumServerJar:'./node_modules/protractor/node_modules/webdriver-manager/selenium/selenium-server-standalone-3.141.59.jar',
+//chromeDriver: './node_modules/protractor/node_modules/webdriver-manager/selenium/gchromedriver_90.0.4430.24',
 
-  // Framework to use. Jasmine is recommended.
-  framework: 'jasmine',
+  
 
   // Spec patterns are relative to the current working directory when
   // protractor is called.
@@ -35,8 +41,43 @@ exports.config = {
   },
 
   // Assign the test reporter to each running instance
-  onPrepare: function() {
+  onPrepare: async function() {
+ 
+    await browser.waitForAngularEnabled(false);
+    var jasmineReporters = require('jasmine-reporters');
+    jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
+    consolidateAll: true,
+    savePath: './',
+    filePrefix: 'xmlresults'
+    
+}));
     jasmine.getEnv().addReporter(reporter);
+    var AllureReporter = require('jasmine-allure-reporter');
+    jasmine.getEnv().addReporter(new AllureReporter({
+      resultsDir: 'allure-results'
+    }));
+
+    var fs = require('fs-extra');
+ 
+fs.emptyDir('screenshots/', function (err) {
+        console.log(err);
+    });
+ 
+    jasmine.getEnv().addReporter({
+        specDone: function(result) {
+            if (result.status == 'failed') {
+                browser.getCapabilities().then(function (caps) {
+                    var browserName = caps.get('browserName');
+ 
+                    browser.takeScreenshot().then(function (png) {
+                        var stream = fs.createWriteStream('screenshots/' + browserName + '-' + result.fullName+ '.png');
+                        stream.write(new Buffer(png, 'base64'));
+                        stream.end();
+                    });
+                });
+            }
+        }
+    });
   },
 
   // Close the report after all tests finish
@@ -44,5 +85,50 @@ exports.config = {
     return new Promise(function(resolve){
       reporter.afterLaunch(resolve.bind(this, exitCode));
     });
-  }
+  },
+
+  onComplete: function() {
+     var browserName, browserVersion;
+     var capsPromise = browser.getCapabilities();
+ 
+     capsPromise.then(function (caps) {
+        browserName = caps.get('browserName');
+        browserVersion = caps.get('version');
+ 
+        var HTMLReport = require('protractor-html-reporter');
+ 
+        testConfig = {
+            reportTitle: 'Test Execution Report',
+            outputPath: './',
+            screenshotPath: './screenshots',
+            testBrowser: browserName,
+            browserVersion: browserVersion,
+            modifiedSuiteName: false,
+            screenshotsOnlyOnFailure: true
+        };
+        new HTMLReport().from('xmlresults.xml', testConfig);
+    });
+ },
+ onComplete: function() {
+  var browserName, browserVersion;
+  var capsPromise = browser.getCapabilities();
+
+  capsPromise.then(function (caps) {
+     browserName = caps.get('browserName');
+     browserVersion = caps.get('version');
+
+     var HTMLReport = require('protractor-html-reporter');
+
+     testConfig = {
+         reportTitle: 'Test Execution Report',
+         outputPath: './',
+         screenshotPath: './screenshots',
+         testBrowser: browserName,
+         browserVersion: browserVersion,
+         modifiedSuiteName: false,
+         screenshotsOnlyOnFailure: true
+     };
+     new HTMLReport().from('xmlresults.xml', testConfig);
+ });
+}
 };

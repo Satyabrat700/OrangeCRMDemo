@@ -1,0 +1,22 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1619652106050' stop='1619652110166'>
+    <name>Assign Leave for Vacation</name>
+    <title>Assign Leave for Vacation</title>
+    <test-cases>
+        <test-case start='1619652106052' status='failed' stop='1619652110164'>
+            <name>LoginPage</name>
+            <title>LoginPage</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Expected true to be false.</message>
+                <stack-trace>Error: Failed expectation
+                    at loginPage.verifyHomePageafterLogin (C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\pages\loginPage.js:35:40)
+                    at UserContext.&lt;anonymous> (C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\tests\orangeCRMDEMO.js:31:27)
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

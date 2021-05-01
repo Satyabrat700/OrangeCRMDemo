@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1619612673616' stop='1619612675983'>
+    <name>Assign Leave for Vacation1</name>
+    <title>Assign Leave for Vacation1</title>
+    <test-cases>
+        <test-case start='1619612673616' status='failed' stop='1619612675980'>
+            <name>Add a new Employee</name>
+            <title>Add a new Employee</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>ReferenceError: data is not defined</message>
+                <stack-trace>ReferenceError: data is not defined
+                    at addNewEmployee.addEmployee (C:\Users\satya\OneDrive\Desktop\Projects\ProtractorDemo\pages\addNewEmployee.js:18:52)
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
