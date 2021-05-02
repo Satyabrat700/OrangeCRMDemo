@@ -13,16 +13,16 @@ exports.config = {
   // Framework to use. Jasmine is recommended.
   framework: 'jasmine',
 
-    directConnect: true,
-  seleniumAddress: 'http://10.10.20.178:4460/wd/hub',
+    //directConnect: true,
+  seleniumAddress: 'http://10.10.20.235:4460/wd/hub',
 
   // Capabilities to be passed to the webdriver instance.
+  
   capabilities: {
     'browserName': 'chrome'
   
   },
-//seleniumServerJar:'./node_modules/protractor/node_modules/webdriver-manager/selenium/selenium-server-standalone-3.141.59.jar',
-//chromeDriver: './node_modules/protractor/node_modules/webdriver-manager/selenium/gchromedriver_90.0.4430.24',
+
 
   
 
@@ -127,6 +127,7 @@ fs.emptyDir('screenshots/', function (err) {
          browserVersion: browserVersion,
          modifiedSuiteName: false,
          screenshotsOnlyOnFailure: true
+         
      };
      new HTMLReport().from('xmlresults.xml', testConfig);
  });

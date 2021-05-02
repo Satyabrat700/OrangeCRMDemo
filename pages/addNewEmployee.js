@@ -112,7 +112,7 @@ let addNewEmployee = function () {
            await dependent_name.click();
            await dependent_name.sendKeys(dependent_name);
            await dependent_relationshipType.click();
-           await dependent_relationshipType.element(by.cssContainingText('option', depOption)).click();
+           await dependent_relationshipType(by.cssContainingText('option', depOption)).click();
            await dependent_relationshipType.click();
            await dependent_dateOfBirth.click();
            await dependent_dateOfBirth.sendKeys(DOB);
@@ -140,19 +140,19 @@ let addNewEmployee = function () {
     // Salary method for adding Salary details etc..   
       this.Salary = async function (payGrade,salaryCompnent,currency,basicSalary) {
           try {
-       await clickSalaryLink.click();
-       await addSalary.click();
+         await clickSalaryLink.click();
+         await addSalary.click();
       // await salary_sal_grd_code.click();
        //await salary_sal_grd_code.element(by.cssContainingText('option', payGrade)).click();
       // await salary_sal_grd_code.click();
-       await salary_salary_component.sendKeys(salaryCompnent);
+        await salary_salary_component.click();
+        await salary_salary_component.sendKeys(salaryCompnent);
+        await salary_currency_id.click()
+        await salary_currency_id.element(by.label('option', currency)).click();
       
-
-      // await salary_currency_id.click().then(function() {salary_currency_id.element(by.label('option', currency)).click()});
-       await salary_currency_id.click();
-       await salary_basic_salary.click();
-       await salary_basic_salary.sendKeys(basicSalary);
-       await btnSalarySave.click();
+        await salary_basic_salary.click();
+        await salary_basic_salary.sendKeys(basicSalary);
+         await btnSalarySave.click();
         
         } catch (error) {
                 console.log('error occured in salaryblock'+error);
@@ -167,7 +167,7 @@ let addNewEmployee = function () {
         await btnSave.click();
         await tax_federalStatus.click();
         await tax_federalStatus.element(by.cssContainingText('option', status)).click();
-        await tax_federalStatus.click();
+        
         await btnSave.click();
          
          } catch (error) {
@@ -184,7 +184,7 @@ let addNewEmployee = function () {
         await reportto_supervisorName_empName.sendKeys(supervisorName);
         await reportto_reportingMethodType.click();
         await reportto_reportingMethodType.element(by.cssContainingText('option', reportingMethod)).click();
-        await reportto_reportingMethodType.click();
+        
         await btnSaveReportTo.click();
          
            } catch (error) {

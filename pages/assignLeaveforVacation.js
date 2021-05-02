@@ -16,24 +16,33 @@
         });
         
 
-    this.assignLeave = async function (txtEmployee_empName,VacationType,startDate,endDate,Comment) {
+    this.assignLeave = async function (empName,VacationType,startDate,endDate,Comment,LeaveURL) {
               try {
 
 		            await leaveModule.click();
 		            await menu_leave_assignLeave.click();
+                browser.get(LeaveURL);
 		            await assignleave_txtEmployee_empName.click();
-		            await assignleave_txtEmployee_empName.sendKeys(txtEmployee_empName);
-                await assignleave_txtLeaveType.clear();
-		            await assignleave_txtLeaveType.click()
-		            .then(() =>  eassignleave_txtLeaveType.element(by.cssContainingText('option', VacationType)).click());
-		            await assignleave_txtLeaveType.click();
+		            await assignleave_txtEmployee_empName.sendKeys(empName);
+		            
+                await assignleave_txtLeaveType.click();
+                var desiredOption = assignleave_txtLeaveType.element(by.cssContainingText('option',VacationType));
+                var EC = protractor.ExpectedConditions;
+                browser.wait(EC.visibilityOf(desiredOption), 5000);
+                desiredOption.click();
+		            //await assignleave_txtLeaveType.element(by.cssContainingText('option',VacationType)).click();
 		            await assignleave_txtFromDate.click();
-		            await eassignleave_txtFromDate.sendKeys(startDate);
+		            await assignleave_txtFromDate.sendKeys(startDate);
+                 await assignleave_txtEmployee_empName.click();
+                await assignleave_txtToDate.click();
+                await assignleave_txtToDate.clear();
 	            	await assignleave_txtToDate.sendKeys(endDate);
+
+                 await assignleave_txtEmployee_empName.click();
 		            await assignleave_txtComment.click();
 		            await assignleave_txtComment.sendKeys(Comment);
-		            await eassignBtn.click();
-		            await econfirmOkButton.click();
+		            await assignBtn.click();
+		            await confirmOkButton.click();
                             } catch (error) {
                 console.log(error+'occured inside assignLeaveforEmp block');
 

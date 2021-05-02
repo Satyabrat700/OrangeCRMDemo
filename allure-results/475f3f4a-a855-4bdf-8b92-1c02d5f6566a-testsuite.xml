@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1619912463755' stop='1619912485985'>
+    <name>Assign Leave for Vacation</name>
+    <title>Assign Leave for Vacation</title>
+    <test-cases>
+        <test-case start='1619912463756' status='passed' stop='1619912467143'>
+            <name>LoginPage</name>
+            <title>LoginPage</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1619912467143' status='passed' stop='1619912478395'>
+            <name>Add New Employee details</name>
+            <title>Add New Employee details</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1619912478395' status='passed' stop='1619912480412'>
+            <name>Add user details</name>
+            <title>Add user details</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1619912480412' status='passed' stop='1619912483086'>
+            <name>Assign leave for vacation</name>
+            <title>Assign leave for vacation</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1619912483086' status='passed' stop='1619912485984'>
+            <name>Login and verify leave</name>
+            <title>Login and verify leave</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

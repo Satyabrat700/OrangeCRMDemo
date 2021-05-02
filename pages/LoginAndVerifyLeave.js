@@ -15,7 +15,9 @@
     this.logOut = async function () {
           try {
 	                await welcomeButton.click();
+                  browser.driver.sleep(2000);
 		              await logOutLink.click();
+
 
           } catch (error) {
                 console.log(error+'occured inside logOut block');
@@ -23,22 +25,33 @@
                }
     }
 
-   this.loginAndVerify = async function (UserID,UserPassword,startDate,endDate,empName) {
+   this.loginAndVerify = async function (UserID,UserPassword,startDate,endDate,empName,URL) {
           try {
-	  await userName.sendKeys(UserID);
-		await password.sendKeys(UserPassword);
+       
+            desiredOption = userName;
+            EC = protractor.ExpectedConditions;
+            browser.wait(EC.visibilityOf(desiredOption), 5000);
+            await desiredOption.click();
+	          await userName.sendKeys(UserID);
+		        await password.sendKeys(UserPassword);
 
-    await loginButton.click();
-		await menu_leave_viewLeaveModule.click();
-		await menu_leave_viewMyLeaveList.click();
+            await loginButton.click();
+
+	        	await menu_leave_viewLeaveModule.click();
+	        	await menu_leave_viewMyLeaveList.click();
 	
 
-		await calFromDate.click();
-		await calFromDate.sendKeys(startDate);
-    await calToDate.click();
-		await calToDate.sendKeys(endDate);
-		await btnSearch.click();
-    expect(await element(textTobeValidated).getText()).toContain(empName);
+		        await calFromDate.click();
+            await calFromDate.clear();
+	        	await calFromDate.sendKeys(startDate);
+             await btnSearch.click();
+             
+            await calToDate.click();
+            await calToDate.clear();
+	          await calToDate.sendKeys(endDate);
+		        await btnSearch.click();
+            expect(await textTobeValidated.getText()).toContain(empNameVerify);
+
               } catch (error) {
                 console.log(error+'occured inside loginAndVerify block');
 

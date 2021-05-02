@@ -14,7 +14,8 @@ var assignLeaveforVacation = function assignLeaveforVacation() {
     throw err;
   });
 
-  this.assignLeave = function _callee(txtEmployee_empName, VacationType, startDate, endDate, Comment) {
+  this.assignLeave = function _callee(empName, VacationType, startDate, endDate, Comment, LeaveURL) {
+    var desiredOption, EC;
     return regeneratorRuntime.async(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
@@ -28,70 +29,82 @@ var assignLeaveforVacation = function assignLeaveforVacation() {
             return regeneratorRuntime.awrap(menu_leave_assignLeave.click());
 
           case 5:
-            _context.next = 7;
+            browser.get(LeaveURL);
+            _context.next = 8;
             return regeneratorRuntime.awrap(assignleave_txtEmployee_empName.click());
 
-          case 7:
-            _context.next = 9;
-            return regeneratorRuntime.awrap(assignleave_txtEmployee_empName.sendKeys(txtEmployee_empName));
+          case 8:
+            _context.next = 10;
+            return regeneratorRuntime.awrap(assignleave_txtEmployee_empName.sendKeys(empName));
 
-          case 9:
-            _context.next = 11;
-            return regeneratorRuntime.awrap(assignleave_txtLeaveType.clear());
-
-          case 11:
-            _context.next = 13;
-            return regeneratorRuntime.awrap(assignleave_txtLeaveType.click().then(function () {
-              return eassignleave_txtLeaveType.element(by.cssContainingText('option', VacationType)).click();
-            }));
-
-          case 13:
-            _context.next = 15;
+          case 10:
+            _context.next = 12;
             return regeneratorRuntime.awrap(assignleave_txtLeaveType.click());
 
-          case 15:
-            _context.next = 17;
+          case 12:
+            desiredOption = assignleave_txtLeaveType.element(by.cssContainingText('option', VacationType));
+            EC = protractor.ExpectedConditions;
+            browser.wait(EC.visibilityOf(desiredOption), 5000);
+            desiredOption.click(); //await assignleave_txtLeaveType.element(by.cssContainingText('option',VacationType)).click();
+
+            _context.next = 18;
             return regeneratorRuntime.awrap(assignleave_txtFromDate.click());
 
-          case 17:
-            _context.next = 19;
-            return regeneratorRuntime.awrap(eassignleave_txtFromDate.sendKeys(startDate));
+          case 18:
+            _context.next = 20;
+            return regeneratorRuntime.awrap(assignleave_txtFromDate.sendKeys(startDate));
 
-          case 19:
-            _context.next = 21;
+          case 20:
+            _context.next = 22;
+            return regeneratorRuntime.awrap(assignleave_txtEmployee_empName.click());
+
+          case 22:
+            _context.next = 24;
+            return regeneratorRuntime.awrap(assignleave_txtToDate.click());
+
+          case 24:
+            _context.next = 26;
+            return regeneratorRuntime.awrap(assignleave_txtToDate.clear());
+
+          case 26:
+            _context.next = 28;
             return regeneratorRuntime.awrap(assignleave_txtToDate.sendKeys(endDate));
 
-          case 21:
-            _context.next = 23;
+          case 28:
+            _context.next = 30;
+            return regeneratorRuntime.awrap(assignleave_txtEmployee_empName.click());
+
+          case 30:
+            _context.next = 32;
             return regeneratorRuntime.awrap(assignleave_txtComment.click());
 
-          case 23:
-            _context.next = 25;
+          case 32:
+            _context.next = 34;
             return regeneratorRuntime.awrap(assignleave_txtComment.sendKeys(Comment));
 
-          case 25:
-            _context.next = 27;
-            return regeneratorRuntime.awrap(eassignBtn.click());
+          case 34:
+            _context.next = 36;
+            return regeneratorRuntime.awrap(assignBtn.click());
 
-          case 27:
-            _context.next = 29;
-            return regeneratorRuntime.awrap(econfirmOkButton.click());
+          case 36:
+            _context.next = 38;
+            return regeneratorRuntime.awrap(confirmOkButton.click());
 
-          case 29:
-            _context.next = 34;
+          case 38:
+            _context.next = 43;
             break;
 
-          case 31:
-            _context.prev = 31;
+          case 40:
+            _context.prev = 40;
             _context.t0 = _context["catch"](0);
             console.log(_context.t0 + 'occured inside assignLeaveforEmp block');
 
-          case 34:
+          case 43:
           case "end":
             return _context.stop();
         }
       }
-    }, null, null, [[0, 31]]);
+    }, null, null, [[0, 40]]);
   };
 };
 

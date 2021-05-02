@@ -39,39 +39,40 @@ describe('Assign Leave for Vacation', function () {
           await addNewEmployee.reportTo(data.supervisorName,data.reportingMethod);
           await addNewEmployee.Qualification(data.experience_employer,data.jobTitle);
           await addNewEmployee.Membership(data.membershipType);
-    })
+        })
 
 
-  //       it('Add user details', async function () {
-  //             browser.waitForAngularEnabled(false);
-  //             browser.ignoreSynchronization = true;
+            it('Add user details', async function () {
+             
 
-  //               await addUserLoginDetails.addUserDetails(data.txtEmployee_empName,data.VacationType,data.startDate,data.endDate,data.Comment);
+                await addUserLoginDetails.addUserDetails(data.empName,data.UserID,data.UserPassword);
 
-  //           })
+            })
 
-  //         it('Assign leave for vacation', async function () {
-  //                   browser.waitForAngularEnabled(false);
-  //                   browser.ignoreSynchronization = true;
+            it('Assign leave for vacation', async function () {
+         
 
-  //                   await assignLeaveforVacation.assignLeave(data.empName,data.UserID,data.UserPassword);
+                    await assignLeaveforVacation.assignLeave(data.empName,data.VacationType,data.startDate,data.endDate,data.Comment,data.LeaveURL);
 
-  //           })
+            })
 
 
-  //         it('Login and verify leave', async function () {
-  //                   browser.waitForAngularEnabled(false);
-  //                   browser.ignoreSynchronization = true;
+          it('Login and verify leave', async function () {
+              
 
-  //                   await LoginAndVerifyLeave.logOut();
-  //                   await LoginAndVerifyLeave.loginAndVerify(data.UserID,data.UserPassword,data.startDate,data.endDate,data.empName);
+                    await LoginAndVerifyLeave.logOut();
+                    await LoginAndVerifyLeave.loginAndVerify(data.UserID,data.UserPassword,data.startDate,data.endDate,data.empName,data.URL);
+                    console.log("End");
 
 
-  //           })
-  
-	
+            })
 
    })
+    afterEach(() => {
+        browser.manage().logs().get('browser').then((browserLog) => {
+            console.log(browserLog); // Outputs: []
+        });
+    });
   });
 
  

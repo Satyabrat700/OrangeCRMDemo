@@ -241,7 +241,7 @@ var addNewEmployee = function addNewEmployee() {
 
           case 11:
             _context4.next = 13;
-            return regeneratorRuntime.awrap(dependent_relationshipType.element(by.cssContainingText('option', depOption)).click());
+            return regeneratorRuntime.awrap(dependent_relationshipType(by.cssContainingText('option', depOption)).click());
 
           case 13:
             _context4.next = 15;
@@ -339,39 +339,47 @@ var addNewEmployee = function addNewEmployee() {
 
           case 5:
             _context6.next = 7;
-            return regeneratorRuntime.awrap(salary_salary_component.sendKeys(salaryCompnent));
+            return regeneratorRuntime.awrap(salary_salary_component.click());
 
           case 7:
             _context6.next = 9;
-            return regeneratorRuntime.awrap(salary_currency_id.click());
+            return regeneratorRuntime.awrap(salary_salary_component.sendKeys(salaryCompnent));
 
           case 9:
             _context6.next = 11;
-            return regeneratorRuntime.awrap(salary_basic_salary.click());
+            return regeneratorRuntime.awrap(salary_currency_id.click());
 
           case 11:
             _context6.next = 13;
-            return regeneratorRuntime.awrap(salary_basic_salary.sendKeys(basicSalary));
+            return regeneratorRuntime.awrap(salary_currency_id.element(by.label('option', currency)).click());
 
           case 13:
             _context6.next = 15;
-            return regeneratorRuntime.awrap(btnSalarySave.click());
+            return regeneratorRuntime.awrap(salary_basic_salary.click());
 
           case 15:
-            _context6.next = 20;
-            break;
+            _context6.next = 17;
+            return regeneratorRuntime.awrap(salary_basic_salary.sendKeys(basicSalary));
 
           case 17:
-            _context6.prev = 17;
+            _context6.next = 19;
+            return regeneratorRuntime.awrap(btnSalarySave.click());
+
+          case 19:
+            _context6.next = 24;
+            break;
+
+          case 21:
+            _context6.prev = 21;
             _context6.t0 = _context6["catch"](0);
             console.log('error occured in salaryblock' + _context6.t0);
 
-          case 20:
+          case 24:
           case "end":
             return _context6.stop();
         }
       }
-    }, null, null, [[0, 17]]);
+    }, null, null, [[0, 21]]);
   }; // Tax Exemption method for adding tax details etc..   
 
 
@@ -398,27 +406,23 @@ var addNewEmployee = function addNewEmployee() {
 
           case 9:
             _context7.next = 11;
-            return regeneratorRuntime.awrap(tax_federalStatus.click());
-
-          case 11:
-            _context7.next = 13;
             return regeneratorRuntime.awrap(btnSave.click());
 
-          case 13:
-            _context7.next = 18;
+          case 11:
+            _context7.next = 16;
             break;
 
-          case 15:
-            _context7.prev = 15;
+          case 13:
+            _context7.prev = 13;
             _context7.t0 = _context7["catch"](0);
             console.log('error occured in taxExemption block' + _context7.t0);
 
-          case 18:
+          case 16:
           case "end":
             return _context7.stop();
         }
       }
-    }, null, null, [[0, 15]]);
+    }, null, null, [[0, 13]]);
   }; // Report To method for adding supervisor details etc..   
 
 
@@ -453,27 +457,23 @@ var addNewEmployee = function addNewEmployee() {
 
           case 13:
             _context8.next = 15;
-            return regeneratorRuntime.awrap(reportto_reportingMethodType.click());
-
-          case 15:
-            _context8.next = 17;
             return regeneratorRuntime.awrap(btnSaveReportTo.click());
 
-          case 17:
-            _context8.next = 22;
+          case 15:
+            _context8.next = 20;
             break;
 
-          case 19:
-            _context8.prev = 19;
+          case 17:
+            _context8.prev = 17;
             _context8.t0 = _context8["catch"](0);
             console.log('error occured in Report to block' + _context8.t0);
 
-          case 22:
+          case 20:
           case "end":
             return _context8.stop();
         }
       }
-    }, null, null, [[0, 19]]);
+    }, null, null, [[0, 17]]);
   }; // Qualification method for adding qualification details etc..   
 
 

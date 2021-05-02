@@ -100,21 +100,63 @@ describe('Assign Leave for Vacation', function () {
           }
         }
       });
-    }); //       it('Add user details', async function () {
-    //             browser.waitForAngularEnabled(false);
-    //             browser.ignoreSynchronization = true;
-    //               await addUserLoginDetails.addUserDetails(data.txtEmployee_empName,data.VacationType,data.startDate,data.endDate,data.Comment);
-    //           })
-    //         it('Assign leave for vacation', async function () {
-    //                   browser.waitForAngularEnabled(false);
-    //                   browser.ignoreSynchronization = true;
-    //                   await assignLeaveforVacation.assignLeave(data.empName,data.UserID,data.UserPassword);
-    //           })
-    //         it('Login and verify leave', async function () {
-    //                   browser.waitForAngularEnabled(false);
-    //                   browser.ignoreSynchronization = true;
-    //                   await LoginAndVerifyLeave.logOut();
-    //                   await LoginAndVerifyLeave.loginAndVerify(data.UserID,data.UserPassword,data.startDate,data.endDate,data.empName);
-    //           })
+    });
+    it('Add user details', function _callee3() {
+      return regeneratorRuntime.async(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              _context3.next = 2;
+              return regeneratorRuntime.awrap(addUserLoginDetails.addUserDetails(data.empName, data.UserID, data.UserPassword));
+
+            case 2:
+            case "end":
+              return _context3.stop();
+          }
+        }
+      });
+    });
+    it('Assign leave for vacation', function _callee4() {
+      return regeneratorRuntime.async(function _callee4$(_context4) {
+        while (1) {
+          switch (_context4.prev = _context4.next) {
+            case 0:
+              _context4.next = 2;
+              return regeneratorRuntime.awrap(assignLeaveforVacation.assignLeave(data.empName, data.VacationType, data.startDate, data.endDate, data.Comment, data.LeaveURL));
+
+            case 2:
+            case "end":
+              return _context4.stop();
+          }
+        }
+      });
+    });
+    it('Login and verify leave', function _callee5() {
+      return regeneratorRuntime.async(function _callee5$(_context5) {
+        while (1) {
+          switch (_context5.prev = _context5.next) {
+            case 0:
+              _context5.next = 2;
+              return regeneratorRuntime.awrap(LoginAndVerifyLeave.logOut());
+
+            case 2:
+              _context5.next = 4;
+              return regeneratorRuntime.awrap(LoginAndVerifyLeave.loginAndVerify(data.UserID, data.UserPassword, data.startDate, data.endDate, data.empName, data.URL));
+
+            case 4:
+              console.log("End");
+
+            case 5:
+            case "end":
+              return _context5.stop();
+          }
+        }
+      });
+    });
+  });
+  afterEach(function () {
+    browser.manage().logs().get('browser').then(function (browserLog) {
+      console.log(browserLog); // Outputs: []
+    });
   });
 });

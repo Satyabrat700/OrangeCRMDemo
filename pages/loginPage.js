@@ -32,7 +32,7 @@ let loginPage = function () {
     this.verifyHomePageafterLogin = async function () {
 
         var text = element(by.xpath("//*[@id='branding']/a[1]/img"));
-      expect(await text.isPresent()).toBe(false);
+      expect(await text.isPresent()).toBe(true);
 
     };
 };

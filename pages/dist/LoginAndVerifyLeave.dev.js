@@ -23,94 +23,114 @@ var LoginAndVerifyLeave = function LoginAndVerifyLeave() {
             return regeneratorRuntime.awrap(welcomeButton.click());
 
           case 3:
-            _context.next = 5;
+            browser.driver.sleep(2000);
+            _context.next = 6;
             return regeneratorRuntime.awrap(logOutLink.click());
 
-          case 5:
-            _context.next = 10;
+          case 6:
+            _context.next = 11;
             break;
 
-          case 7:
-            _context.prev = 7;
+          case 8:
+            _context.prev = 8;
             _context.t0 = _context["catch"](0);
             console.log(_context.t0 + 'occured inside logOut block');
 
-          case 10:
+          case 11:
           case "end":
             return _context.stop();
         }
       }
-    }, null, null, [[0, 7]]);
+    }, null, null, [[0, 8]]);
   };
 
-  this.loginAndVerify = function _callee2(UserID, UserPassword, startDate, endDate, empName) {
+  this.loginAndVerify = function _callee2(UserID, UserPassword, startDate, endDate, empName, URL) {
     return regeneratorRuntime.async(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
             _context2.prev = 0;
-            _context2.next = 3;
+            desiredOption = userName;
+            EC = protractor.ExpectedConditions;
+            browser.wait(EC.visibilityOf(desiredOption), 5000);
+            _context2.next = 6;
+            return regeneratorRuntime.awrap(desiredOption.click());
+
+          case 6:
+            _context2.next = 8;
             return regeneratorRuntime.awrap(userName.sendKeys(UserID));
 
-          case 3:
-            _context2.next = 5;
+          case 8:
+            _context2.next = 10;
             return regeneratorRuntime.awrap(password.sendKeys(UserPassword));
 
-          case 5:
-            _context2.next = 7;
+          case 10:
+            _context2.next = 12;
             return regeneratorRuntime.awrap(loginButton.click());
 
-          case 7:
-            _context2.next = 9;
+          case 12:
+            _context2.next = 14;
             return regeneratorRuntime.awrap(menu_leave_viewLeaveModule.click());
 
-          case 9:
-            _context2.next = 11;
+          case 14:
+            _context2.next = 16;
             return regeneratorRuntime.awrap(menu_leave_viewMyLeaveList.click());
 
-          case 11:
-            _context2.next = 13;
+          case 16:
+            _context2.next = 18;
             return regeneratorRuntime.awrap(calFromDate.click());
 
-          case 13:
-            _context2.next = 15;
+          case 18:
+            _context2.next = 20;
+            return regeneratorRuntime.awrap(calFromDate.clear());
+
+          case 20:
+            _context2.next = 22;
             return regeneratorRuntime.awrap(calFromDate.sendKeys(startDate));
 
-          case 15:
-            _context2.next = 17;
-            return regeneratorRuntime.awrap(calToDate.click());
-
-          case 17:
-            _context2.next = 19;
-            return regeneratorRuntime.awrap(calToDate.sendKeys(endDate));
-
-          case 19:
-            _context2.next = 21;
+          case 22:
+            _context2.next = 24;
             return regeneratorRuntime.awrap(btnSearch.click());
 
-          case 21:
-            _context2.t0 = expect;
-            _context2.next = 24;
-            return regeneratorRuntime.awrap(element(textTobeValidated).getText());
-
           case 24:
-            _context2.t1 = _context2.sent;
-            _context2.t2 = empName;
-            (0, _context2.t0)(_context2.t1).toContain(_context2.t2);
+            _context2.next = 26;
+            return regeneratorRuntime.awrap(calToDate.click());
+
+          case 26:
+            _context2.next = 28;
+            return regeneratorRuntime.awrap(calToDate.clear());
+
+          case 28:
+            _context2.next = 30;
+            return regeneratorRuntime.awrap(calToDate.sendKeys(endDate));
+
+          case 30:
             _context2.next = 32;
+            return regeneratorRuntime.awrap(btnSearch.click());
+
+          case 32:
+            _context2.t0 = expect;
+            _context2.next = 35;
+            return regeneratorRuntime.awrap(textTobeValidated.getText());
+
+          case 35:
+            _context2.t1 = _context2.sent;
+            _context2.t2 = empNameVerify;
+            (0, _context2.t0)(_context2.t1).toContain(_context2.t2);
+            _context2.next = 43;
             break;
 
-          case 29:
-            _context2.prev = 29;
+          case 40:
+            _context2.prev = 40;
             _context2.t3 = _context2["catch"](0);
             console.log(_context2.t3 + 'occured inside loginAndVerify block');
 
-          case 32:
+          case 43:
           case "end":
             return _context2.stop();
         }
       }
-    }, null, null, [[0, 29]]);
+    }, null, null, [[0, 40]]);
   };
 };
 
