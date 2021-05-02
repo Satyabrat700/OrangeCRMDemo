@@ -16,7 +16,7 @@ exports.config = _defineProperty({
   seleniumAddress: 'http://10.10.20.235:4460/wd/hub',
   // Capabilities to be passed to the webdriver instance.
   capabilities: {
-    'browserName': 'chrome' // providing the browser name :::::
+    'browserName': 'chrome' // providing the browser name ::::::Demo for GIT
 
   },
   // Spec patterns are relative to the current working directory when
